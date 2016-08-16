@@ -2,7 +2,7 @@ require 'open-uri'
 require './class/save_string'
 
 
-resource = "http://www.suva.ch/startseite-suva/praevention-suva/arbeit-suva/spezialisten-der-arbeitssicherheit-suva.htm?information_4=&information_5=5uVa&industry=&consulting=&country=1&plz=&city=&lastname=&firstname=&submitbutton=Suchen&orderby=lastname&direction=asc&currentPage="
+resource = "https://tel.local.ch/de/q/Schule,%20%C3%B6ffentliche.html?rid=j5eP&page="
 
 saver = SaveString.new('downloads/1')
 
@@ -12,7 +12,7 @@ while true do
   html = open(res)
   content = html.read
 
-  if content =~ /Keine Daten gefunden/
+  if content =~ /Seite nicht gefunden/
     break
   end
 
